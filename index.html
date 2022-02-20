@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Vrushabh Dhatrak" />
+    <meta
+      name="description"
+      content="Note Taking App is an where user can add notes, edit & delete notes"
+    />
+    <title>Note Taking App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container_note">
+        <div class="head-1 highlightMainText">My Notes App</div>
+        <div class="form container-card xxl-card-width pad-md">
+          <div class="custom-input-one mar-y-2">
+            <input
+              id="note-title"
+              type="text"
+              class="input-field"
+              autocomplete="off"
+              placeholder=" "
+            />
+            <label for="note-title" class="input-label text-2"
+              >Note Title</label
+            >
+          </div>
+          <textarea
+            id="note-text"
+            class="custom-input-one mar-y-2"
+            placeholder="Note Details"
+          ></textarea>
+
+          <button class="btn btn-primary mar-y-6" id="add-btn">Add Note</button>
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <div class="container_note mar-y-3">
+        <div class="head-2 highlightMainText">Your Notes</div>
+        <hr />
+        <div class="">
+          <div id="notes">
+            <div class="note form container-card xxl-card-width pad-md mar-y-2">
+              <div class="note-counter text-4">Note ${index + 1}</div>
+              <h3 class="note-title head-2 highlightMainText">
+                ${element.title}
+              </h3>
+              <p class="note-text text-3 bold">${element.text}</p>
+              <button
+                id="${index}"
+                onclick="deleteNote(this.id)"
+                class="note-btn btn btn-danger mar-y-3 text-2"
+              >
+                Delete Note
+              </button>
+              <button
+                id="${index}"
+                onclick="editNote(this.id)"
+                class="note-btn edit-btn btn btn-success mar-y-3 text-2"
+              >
+                Edit Note
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
