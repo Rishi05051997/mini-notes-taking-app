@@ -1,0 +1,40 @@
+@import url('https://memorable-ui.netlify.app/styles/main.css');
+
+.container_note {
+    max-width: 60rem;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    line-height: 2;
+}
+
+header .form {
+    display: flex;
+    flex-direction: column;
+}
+
+.custom-input-one {
+    width: 100%;
+}
+
+
+.form textarea {
+    width: 100%;
+    padding: 7px 0 40px 5px;
+    font-size: var(--text-sm-font-size);
+    font-family: inherit;
+}
+
+::placeholder {
+    font-size: var(--text-sm-font-size);
+}
+
+.note {
+    max-height: 50vh;
+    overflow-y: auto;
+}
